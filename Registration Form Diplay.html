@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+ Gowtham's Register Form  
+</title>
+<link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzTfK4JRwEbkPzvzkxE_6pSOx9d5FW5Uc0Tw&usqp=CAU" type = "image/y-icon">
+</head>
+<body>
+<center><h1><font color = "Orange">Result Page</font></h1><hr>
+<p><h2><font color = "puple">Your Registion Completed Successfully</p></center></font><hr>
+ <font face = "Verdana" size = "5"><p id = "res"></p>
+</center>
+<script>
+var data = window.location.search;
+var params = new URLSearchParams(data);
+console.log(params);
+var name = params.get("name");
+var age = params.get("age");
+var college = params.get("college");
+var email = params.get("email");
+var password = params.get("password");
+var mobile = params.get("mobile");
+var address = params.get("address");
+var dob = params.get("dob");
+
+var getData ="‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎      ‎‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎  ‎  ‎ Your Name Is "+"<mark>"+name+"</mark>";
+    getData += " . And Your Age is "+"<mark>"+age+"</mark>"+". And Your Birth Year is "+"<mark>"+dob+"</mark>";
+getData += ". "+"<br>"+"You Studying At "+"<mark>"+college+"</mark>";
+getData += ". And Your Email I'd is "+"<mark>"+email+"</mark>";
+getData += ". The Password For The Given Email I'd is "+"<mark>"+password+"</mark>";
+getData +=  ". The Contact Number Of Your's Is "+"<mark>"+mobile+"</mark>"+"."+" Finally Your Address Is "+"<mark>"+address+"</mark>"+". "+"<hr>"+"<center>"+"Created By GOWTHAM C D"+"</center>";
+document.getElementById("res").innerHTML = getData;
+</script>
+</body>
+</html>
